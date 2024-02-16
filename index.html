@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Startup Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #search-bar {
+            width: 100%;
+            max-width: 600px;
+            height: 40px;
+            border: none;
+            padding: 5px;
+            font-size: 16px;
+        }
+        @media (max-width: 600px) {
+            #search-bar {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <input id="search-bar" type="text" placeholder="Search..." onkeydown="search(event)">
+    <script>
+        function search(event) {
+            if (event.key === 'Enter') {
+                window.location.href = 'https://search.bus-hit.me/search?q=' + document.getElementById('search-bar').value;
+            }
+        }
+    </script>
+</body>
+</html>
