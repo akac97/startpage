@@ -42,3 +42,9 @@ function draw()
 }
 
 setInterval(draw, 33);
+
+function search(event) {
+    if (event.key === 'Enter') {
+        window.location.href = 'https://search.bus-hit.me/search?q=' + document.getElementById('search-bar').value;
+    }
+}
