@@ -8,8 +8,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    overflow: hidden;
 }
 
 #search-bar {
@@ -18,8 +16,12 @@ body {
     height: 40px;
     border: none;
     padding: 5px;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 20px; /* Rounding */
     background-color: #FFFFFF; /* White background for contrast */
     color: #000000; /* Black text for contrast */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
