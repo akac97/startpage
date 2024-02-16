@@ -2,34 +2,18 @@
 <html>
 <head>
     <title>Custom Startup Page</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script>
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        if (isMobile) {
+            link.href = 'mobile.css'; // Load mobile.css if on a mobile device
+        } else {
+            link.href = 'pc.css'; // Load pc.css if on a desktop
         }
-        #search-bar {
-            width: 100%;
-            max-width: 600px;
-            height: 40px;
-            border: none;
-            padding: 5px;
-            font-size: 16px;
-            border-radius: 20px; /* Add rounding */
-        }
-        @media (max-width: 600px) {
-            #search-bar {
-                width: 90%;
-                font-size: 14px; /* Smaller font size for mobile */
-                border-radius: 20px; /* Add rounding for mobile */
-            }
-        }
-    </style>
+        document.head.appendChild(link);
+    </script>
 </head>
 <body>
     <input id="search-bar" type="text" placeholder="Search..." onkeydown="search(event)">
