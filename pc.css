@@ -26,14 +26,9 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#time {
+#time-calendar {
     position: absolute;
     top: 10px;
     right: 10px;
-}
-
-#calendar {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    font-size: 16px;
 }
