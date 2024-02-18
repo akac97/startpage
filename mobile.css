@@ -12,7 +12,7 @@ body {
 
 #search-bar {
     width: 90%;
-    max-width: 600px;
+    max-width: 300px;
     height: 40px;
     border: none;
     padding: 5px;
@@ -26,14 +26,9 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#time {
+#time-calendar {
     position: absolute;
     top: 10px;
     right: 10px;
-}
-
-#calendar {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    font-size: 12px;
 }
