@@ -1,27 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>DANUP V1</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <script>
-        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        var link = document.createElement('link');
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        const link = document.createElement('link');
         link.rel = 'stylesheet';
-        if (isMobile) {
-            link.href = 'mobile.css'; // Load mobile.css if on a mobile device
-        } else {
-            link.href = 'pc.css'; // Load pc.css if on a desktop
-        }
+        link.href = isMobile ? 'mobile.css' : 'pc.css';
         document.head.appendChild(link);
     </script>
 </head>
 <body>
-    <div id="site-name">DANUP V1</div>
+    <header id="site-name">DANUP V1</header>
     <canvas id="matrixCanvas"></canvas>
-    <input id="search-bar" type="text" placeholder="Search..." onkeydown="search(event)">
-    <div id="time-calendar"></div>
-    <script src="matrix.js"></script>
-    <script src="search.js"></script>
-    <script src="time.js"></script>
+    <input id="search-bar" type="search" placeholder="Search..." onkeydown="search(event)">
+    <time id="time-calendar"></time>
+    <script src="main.js"></script>
 </body>
 </html>
